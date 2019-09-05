@@ -1,0 +1,57 @@
+Lightning web components. The following is a guide to how to do common actions in LWCs.
+It is sorted by section and the [component] or explanation is listed to the right. 
+* means there is a note about it below
+[standard: component] means it is a standard component
+
+Best Practices:
+https://developer.salesforce.com/blogs/2018/12/introducing-lightning-web-components-recipes-patterns-and-best-practices.html
+
+-----------------------------------------------------------------------------------------
+Basic Setup
+-----------------------------------------------------------------------------------------
+Style the component like SLDS				Use SLDS styling. It still works
+Add custom CSS								Add a CSS file. Name must match folder. See [basicSetup]
+Add on-setup-screen input vars 				See xml in [basicSetup]
+
+
+-----------------------------------------------------------------------------------------
+Tables
+----------------------------------------------------------------------------------------- 
+Create a table of custom data				[standard: datatable] Get code from the playground (look for button)
+Create a table of object data				Missing documentation. Eventually [standard: ui-list-api]. Use datatable for now
+
+
+
+-----------------------------------------------------------------------------------------
+UI Actions
+----------------------------------------------------------------------------------------- 
+Customize layout							[lwcApexCommunication]
+Throw (and close) a modal/lightbox			[uiActions]
+Throw a spinner								[standard: spinner] and [uiActions]
+Throw a toast								[standard: platform-show-toast]
+Conditionally display things-DONE			[lwcApexCommunication]
+Loop over some data							[lwcApexCommunication]
+
+
+
+
+-----------------------------------------------------------------------------------------
+Data Handling
+----------------------------------------------------------------------------------------- 
+Get a form of object data with fields		[lightningDataService]
+Get read-only fields						[lightningDataService]
+Save data without Apex						[lightningDataService]
+Communicate with apex						[lwcApexCommunication] -This isn't the same as above
+Redirect to a page							[standard: navigation] or use window.open or other standard JS/HTML
+Get a dynamic picklist						[standard: combobox]
+
+
+
+-----------------------------------------------------------------------------------------
+Other
+-----------------------------------------------------------------------------------------
+Pass variables between components		[eventsChildComponent/eventsParentComponent]
+Data binding/Events						[eventsChildComponent/eventsParentComponent]
+Run on initialization					[basicSetup]
+Integrate with jQuery					I haven't seen anything on this yet. Not sure you can
+

@@ -1,0 +1,9 @@
+<template>
+    <lightning-button variant="brand" label="Click to Generate Apex" onclick={handleClick}></lightning-button>
+    <br/>
+    <template if:true={accounts.data}>
+        <template for:each={accounts.data} for:item="acct">
+            <p key={acct.Id}>{acct.Name}</p>
+        </template>
+    </template>
+</template>
