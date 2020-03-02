@@ -6,7 +6,6 @@ export default class BasicSetup extends LightningElement {
     changeHandler(event) {
         this.greeting = event.target.value;
     }
-    @api title = 'default component value';
 	
 	//Both @track and @api make the component re-render based on a variable change.
     //@api makes the var public and editable from other components. @track makes it private to this component

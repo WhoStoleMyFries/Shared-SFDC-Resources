@@ -1,5 +1,4 @@
 import { LightningElement, track, wire } from 'lwc';
-import doAThing from '@salesforce/apex/lwcApexCommunicationController.doAThing';
 import useWire from '@salesforce/apex/lwcApexCommunicationController.useWire';
 
 export default class LwcApexCommunication extends LightningElement {
@@ -11,12 +10,10 @@ export default class LwcApexCommunication extends LightningElement {
     @track error;
 
     handleClick() {
-        doAThing( {input: 'Im a text input', otherInput: 123} )
         .then(result => {
             this.output = result;
             this.doSomethingWithResponse();
         })
-        .catch(error => {this.error = error; console.log('I failed: '+this.error);})
     }
 
     doSomethingWithResponse() {
